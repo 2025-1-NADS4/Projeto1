@@ -10,28 +10,30 @@ Vide tutoriais do PI.
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# ⭐ Grupo OrganizAi
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/matheus-emiliano/">Matheus Emiliano</a>, <a href="https://www.linkedin.com/in/guilherme-carvalho-da-silva-7996b0197/">Guilherme Silva</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="https://www.linkedin.com/in/giovane-estevan/">Giovane Estevan</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>
 
-## Descrição
+# 📱 Projeto OrganizAi
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" /></a>
 </p>
 
+# 📜 Descrição:
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+O OrganizAi é um aplicativo que te ajuda a controlar suas finanças de forma simples e intuitiva. Mas vai além disso: ele te conecta com benefícios sociais que você pode ter direito, personalizando a sua jornada financeira.
+
+## 💸 Como funciona:
+
+<p>✅ Perfil Financeiro: Crie um perfil detalhado sobre sua renda, família e gastos.</p>
+<p>✅ Benefícios Personalizados: Com base no seu perfil, o OrganizAi indica quais benefícios do governo você pode solicitar e te guia passo a passo no processo.</p>
+<p>✅ Organização Financeira: Acompanhe seus gastos, crie orçamentos e alcance suas metas financeiras.</p>
+
 
 ## 🛠 Estrutura de pastas
 
@@ -104,15 +106,12 @@ Coloque código do prompt de comnando se for necessário
 ```
 
 ## 📋 Licença/License
-Utilize o link <https://chooser-beta.creativecommons.org/> para fazer uma licença CC BY 4.0.
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2024-2-NADS3/Projeto3/tree/main">OrganizAi</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2024-2-NADS3/Projeto3/tree/main">Giovane Estevan , Guilherme Silva, Matheus Emiliano e Matheus Moura</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
 ## 🎓 Referências
-
-Aqui estão as referências usadas no projeto.
 
 1. <https://github.com/iuricode/readme-template>
 2. <https://github.com/gabrieldejesus/readme-model>
 3. <https://chooser-beta.creativecommons.org/>
-4. <https://freesound.org/>
-5. <https://www.toptal.com/developers/gitignore>
-6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+4. <https://www.toptal.com/developers/gitignore>

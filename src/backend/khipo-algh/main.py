@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from prediction import prediction
 from estimative import estimativa
 
 class AdressRequest(BaseModel):

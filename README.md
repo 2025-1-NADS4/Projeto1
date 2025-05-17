@@ -14,9 +14,9 @@
 
 # 📱 Projeto OrganizAi
 
-<a href="https://imgbb.com/">
-  <img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" />
-</a>
+<p align="center">
+  <img src="imagens/01_cel_login.jpg" alt="Tela de Login" width="300">
+</p>
 
 # 📜 Descrição:
 

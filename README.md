@@ -70,62 +70,29 @@ Este módulo não requer instalação tradicional.
 
 🔧 Requisitos
 Você precisa ter instalados:
-
 Python 3.10+
-
 Node.js + npm
-
 Git
-
 (Opcional) VS Code
 
-📦 Instalação do Backend (Python + Dash + ML)
-bash
-Copiar
-# Clone o repositório
+Clone o repositório
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio/backend
 
-# Crie e ative um ambiente virtual
-python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
+📦 Instalação do Backend (Python  + ML)
 
-# Instale as dependências
-pip install -r requirements.txt
-
-# Rode o servidor local
-python app.py  # ou main.py, conforme o nome do seu arquivo principal
-O backend estará disponível em:
-
-arduino
-Copiar
-http://localhost:8050
 🎨 Instalação do Frontend (React + TailwindCSS)
-bash
-Copiar
-# Acesse a pasta do frontend
+
+Acesse a pasta do frontend
 cd ../frontend
 
-# Instale as dependências do projeto React
+Instale as dependências do projeto React
 npm install
 
-# Rode o app React em modo de desenvolvimento
+Rode o app React em modo de desenvolvimento
 npm run dev  # ou npm start, dependendo da config do seu projeto
 O frontend estará acessível em:
-
-arduino
-Copiar
 http://localhost:3000
-✅ Rodar Testes Automatizados
-Se você tiver testes configurados:
-
-bash
-Copiar
-# Para testes em React:
-npm test
-
-# Para testes no backend Python (ex: pytest):
-pytest
 
 ## 📋 Licença/License
 

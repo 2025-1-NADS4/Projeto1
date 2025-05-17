@@ -11,16 +11,9 @@
 
 ## Nome do Grupo
 
-**Integrantes:**  
-[Matheus Emiliano](https://www.linkedin.com/in/matheus-emiliano/),  
-[Guilherme Silva](https://www.linkedin.com/in/guilherme-carvalho-da-silva-7996b0197/),  
-[Matheus Moura](https://www.linkedin.com/in/mmoura97/),  
-[Giovane Estevan](https://www.linkedin.com/in/giovane-estevan/)
+## Integrantes: <a href="https://www.linkedin.com/in/matheus-emiliano/">Matheus Emiliano</a>, <a href="https://www.linkedin.com/in/guilherme-carvalho-da-silva-7996b0197/">Guilherme Silva</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="https://www.linkedin.com/in/giovane-estevan/">Giovane Estevan</a>
 
-**Professores Orientadores:**  
-[Victor Quiroz](https://www.linkedin.com/in/victorbarq/),  
-[Aimar Martins Lopes](https://www.linkedin.com/in/aimarlopes/)
-
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>
 ---
 
 # 📱 Projeto OrganizAi

@@ -34,27 +34,20 @@ O OrganizAi é um aplicativo que te ajuda a controlar suas finanças de forma si
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
   &emsp;|-->Backend<br>
   &emsp;|-->Frontend<br>
+|gitignore.md<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
+<b>Gitgnore.MD</b>: Arquivo que serve como guia das ferramentas utilizadas.
 <b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
 
 Há também 4 pastas que seguem da seguinte forma:
 
 <b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
 
 <b>imagens</b>: Imagens do sistema
 
@@ -62,42 +55,77 @@ Há também 4 pastas que seguem da seguinte forma:
 
 ## 🛠 Instalação
 
-<b>Android:</b>
+Este módulo não requer instalação tradicional.
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+### 🔍 Como executar:
 
-```sh
-Coloque código do prompt de comnando se for necessário
-```
+- Execute o projeto localmente em seu navegador.
+- O módulo de previsão de preços será carregado como uma página web.
 
-<b>Windows:</b>
+### 💻 Modo de uso:
 
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+- Acesse o arquivo `index.html`
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+🔧 Requisitos
+Você precisa ter instalados:
 
-Para abrir este projeto você necessita das seguintes ferramentas:
+Python 3.10+
 
--<a href="https://godotengine.org/download">GODOT</a>
+Node.js + npm
 
-```sh
-make install
+Git
+
+(Opcional) VS Code
+
+📦 Instalação do Backend (Python + Dash + ML)
+bash
+Copiar
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio/backend
+
+# Crie e ative um ambiente virtual
+python -m venv venv
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Rode o servidor local
+python app.py  # ou main.py, conforme o nome do seu arquivo principal
+O backend estará disponível em:
+
+arduino
+Copiar
+http://localhost:8050
+🎨 Instalação do Frontend (React + TailwindCSS)
+bash
+Copiar
+# Acesse a pasta do frontend
+cd ../frontend
+
+# Instale as dependências do projeto React
+npm install
+
+# Rode o app React em modo de desenvolvimento
+npm run dev  # ou npm start, dependendo da config do seu projeto
+O frontend estará acessível em:
+
+arduino
+Copiar
+http://localhost:3000
+✅ Rodar Testes Automatizados
+Se você tiver testes configurados:
+
+bash
+Copiar
+# Para testes em React:
 npm test
-Coloque código do prompt de comnando se for necessário
-```
+
+# Para testes no backend Python (ex: pytest):
+pytest
 
 ## 📋 Licença/License
 

@@ -14,9 +14,9 @@
 
 # 📱 Projeto OrganizAi
 
-<p align="center">
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" /></a>
-</p>
+<a href="https://imgbb.com/">
+  <img src="https://i.ibb.co/4YJYWj1/Organiz-Ai.png" alt="Organiz-Ai" border="0" />
+</a>
 
 # 📜 Descrição:
 

@@ -11,26 +11,26 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/matheus-emiliano/">Matheus Emiliano</a>, <a href="https://www.linkedin.com/in/guilherme-carvalho-da-silva-7996b0197/">Guilherme Silva</a>, <a href="https://www.linkedin.com/in/mmoura97/">Matheus Moura</a>, <a href="https://www.linkedin.com/in/giovane-estevan/">Giovane Estevan</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Quiroz</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Martins Lopes</a>, <a href="https://br.linkedin.com/in/edsonbarbero">Edson Ricardo Barbero</a>, <a href="https://br.linkedin.com/in/eduardo-savino-gomes-77833a10">Eduardo Savino Gomes</a>, <a href="https://br.linkedin.com/in/lucymari">Lucy Mari Tabuti</a>, <a href="https://br.linkedin.com/in/ronaldo-araujo-pinto-3542811a">Ronaldo Araujo Pinto</a>
 ---
 
 # 📱 Projeto OrganizAi
 
 <p align="center">
-  <img src="imagens/01_cel_login.jpg" alt="Tela de Login" width="500">
+  <img src="imagens/organizai_icon (1).png" alt="Tela de Login" width="500">
 </p>
 
 ---
 
 # 📜 Descrição
 
-O OrganizAi é um aplicativo que te ajuda a controlar suas finanças de forma simples e intuitiva. Mas vai além disso: ele te conecta com benefícios sociais que você pode ter direito, personalizando a sua jornada financeira.
+O OrganizAi é uma plataforma para ajudar você a encontrar os melhores preços para suas viagens.
 
 ## 💸 Como funciona:
 
-- ✅ **Perfil Financeiro:** Crie um perfil detalhado sobre sua renda, família e gastos.  
-- ✅ **Benefícios Personalizados:** Com base no seu perfil, o OrganizAi indica quais benefícios do governo você pode solicitar e te guia passo a passo no processo.  
-- ✅ **Organização Financeira:** Acompanhe seus gastos, crie orçamentos e alcance suas metas financeiras.  
+- ✅ **Economia Certa:** Compare preços e economize em cada viagem, garantindo o melhor valor sempre. 
+- ✅ **Facilidade:** Poupe tempo encontrando a melhor oferta sem precisar abrir vários apps. 
+- ✅ **Escolha Inteligente:** Tenha transparência e poder de escolha, decidindo sempre pelo que te atende melhor.
 
 ---
 
@@ -39,7 +39,9 @@ O OrganizAi é um aplicativo que te ajuda a controlar suas finanças de forma si
 ```
 Raiz
 ├── documentos
-│   └── Documentação.docx
+│   └── Entrega 1
+│   └── Entrega 2
+│   └── Entrega 3
 ├── imagens
 ├── src
 │   ├── Backend

@@ -17,8 +17,8 @@ app = FastAPI()
 async def get_estimative(request: AdressRequest):
     valor = estimativa(request.origem, request.destino)
     uber_x = valor[0]
-    uber_comfort = uber_x * 1.15
-    uber_black= uber_comfort * 1.15
+    uber_comfort = uber_x * 1.25
+    uber_black= uber_comfort * 1.25
 
     return EstimativeResponse(
         uberBlack=f"{uber_black:.2f}",

@@ -10,6 +10,7 @@ import re
 import datetime
 from geopy.geocoders import Nominatim
 import geopy.distance
+import requests
 from prediction import prediction
 
 def estimativa(origem, destino):
@@ -42,17 +43,17 @@ def estimativa(origem, destino):
     df['Horario'] = pd.to_datetime(df['Horario'], format='%H:%M:%S', errors='coerce')
     df['hora'] = df['Horario'].dt.hour
 
-    loc = Nominatim(user_agent="Geopy Library")
-    origem = loc.geocode(origem)
-    destino = loc.geocode(destino)
-
-    coords_1 = (origem.latitude, origem.longitude)
-    coords_2 = (destino.latitude, destino.longitude)
-
-    dist = geopy.distance.distance(coords_1, coords_2).km
+    response = requests.get(f"http://localhost:8080/assistent/distance?origem={origem}&destino={destino}")
+    print(f"http://localhost:8080/assistent/distance?origem={origem}&destino={destino}")
+    print(response)
+    data = response.json()
+    dist = data.get("distancia_km")
+    origemLat = data.get("origemLat")
+    origemLong = data.get("origemLong")
+    destLat = data.get("destLat")
+    destLong = data.get("destLong")
     
-    print(f"Coordenadas de origem: {coords_1}")
-    print(f"Coordenadas de destino: {coords_2}")
+    print(data)
     print(f"Distancia do trajeto: {dist} ")
 
     x = datetime.datetime.now()
@@ -61,10 +62,10 @@ def estimativa(origem, destino):
         'Distancia_KM': dist,
         'hora': int(x.strftime("%H")) - 3,
         'dia_semana': dias_semana[x.strftime("%A")],
-        'LatOrigem': origem.latitude,
-        'LongOrigem': origem.longitude,
-        'LatDestino': destino.latitude,
-        'LongDestino': destino.longitude,
+        'LatOrigem': origemLat,
+        'LongOrigem': origemLong,
+        'LatDestino': destLat,
+        'LongDestino': destLong,
     }
 
     X = df[['Distancia_KM', 'hora', 'dia_semana', 'LatOrigem', 'LongOrigem', 'LatDestino', 'LongDestino', 'valor_Comfort', 'valor_poupa99', 'valor_pop99']]
@@ -139,6 +140,11 @@ def estimativa(origem, destino):
     colunas_modelo = ['Distancia_KM', 'hora', 'dia_semana',
                     'LatOrigem', 'LongOrigem', 'LatDestino', 'LongDestino',
                     'valor_Comfort', 'valor_poupa99', 'valor_pop99']
+    
+    for col in colunas_modelo:
+     if col not in input_usuario:
+        print(f"⚠️  Coluna {col} ausente, atribuindo np.nan")
+        input_usuario[col] = np.nan
 
     entrada_modelo = pd.DataFrame([[input_usuario[col] for col in colunas_modelo]], columns=colunas_modelo)
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
 type estimativeResponse = {
@@ -6,6 +6,13 @@ type estimativeResponse = {
   uberComfort: number;
   uberBlack: number;
 };
+declare global {
+  interface Window {
+    google: typeof google;
+  }
+}
+
+const GOOGLE_API_KEY = 'AIzaSyAdoRf5c3Wj8_SXlQCFXi4wju0xn64fqyQ';
 
 const UberFareEstimator: React.FC = () => {
   const [origin, setOrigin] = useState('');
@@ -14,27 +21,59 @@ const UberFareEstimator: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [estimative, setEstimative] = useState<estimativeResponse | null>(null);
 
+  const originRef = useRef<HTMLInputElement | null>(null);
+  const destinationRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    const loadGoogleMapsScript = () => {
+      if (typeof window.google === 'undefined') {
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=places`;
+        script.async = true;
+        script.onload = initAutocomplete;
+        document.body.appendChild(script);
+      } else {
+        initAutocomplete();
+      }
+    };
+
+    const initAutocomplete = () => {
+      if (originRef.current) {
+        const autocompleteOrigin = new window.google.maps.places.Autocomplete(originRef.current);
+        autocompleteOrigin.addListener('place_changed', () => {
+          const place = autocompleteOrigin.getPlace();
+          setOrigin(place.formatted_address ?? '');
+        });
+      }
+
+      if (destinationRef.current) {
+        const autocompleteDest = new window.google.maps.places.Autocomplete(destinationRef.current);
+        autocompleteDest.addListener('place_changed', () => {
+          const place = autocompleteDest.getPlace();
+          setDestination(place.formatted_address ?? '');
+        });
+      }
+    };
+
+    loadGoogleMapsScript();
+  }, []);
+
   const handleEstimate = async () => {
     setLoading(true);
     setError(null);
     setEstimative(null);
 
     try {
-      // const response = await fetch('http://127.0.0.1:8000/estimative', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ origem: origin, destino: destination }),
-      // });
+      const response = await fetch('http://127.0.0.1:8000/estimative', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ origem: origin, destino: destination }),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error('Erro na requisição');
-      // }
+      if (!response.ok) throw new Error('Erro na requisição');
 
-      // const data: estimativeResponse = await response.json();
-
-      setEstimative({ uberX: 10, uberComfort: 20, uberBlack: 30 });
+      const data: estimativeResponse = await response.json();
+      setEstimative(data);
     } catch (error) {
       console.error('Erro ao buscar estimativa:', error);
       setError('Ocorreu um erro ao buscar a estimativa. Tente novamente.');
@@ -53,8 +92,7 @@ const UberFareEstimator: React.FC = () => {
           <input
             type='text'
             placeholder='Origem'
-            value={origin}
-            onChange={(e) => setOrigin(e.target.value)}
+            ref={originRef}
             className='flex-1 outline-none'
           />
         </div>
@@ -64,8 +102,7 @@ const UberFareEstimator: React.FC = () => {
           <input
             type='text'
             placeholder='Destino'
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
+            ref={destinationRef}
             className='flex-1 outline-none'
           />
         </div>
@@ -84,18 +121,11 @@ const UberFareEstimator: React.FC = () => {
       {estimative && (
         <div className='mt-6 w-full max-w-md bg-white p-4 rounded shadow'>
           <ul className='space-y-1 text-xl'>
-            <li className='flex-col space-around'>
-              <strong>UberX:</strong> R$ {estimative.uberX.toFixed(2)}
-            </li>
-            <hr></hr>
-            <li>
-              <strong>Uber Comfort:</strong> R${' '}
-              {estimative.uberComfort.toFixed(2)}
-            </li>
-            <hr></hr>
-            <li>
-              <strong>Uber Black:</strong> R$ {estimative.uberBlack.toFixed(2)}
-            </li>
+            <li><strong>UberX:</strong> R$ {estimative.uberX}</li>
+            <hr />
+            <li><strong>Uber Comfort:</strong> R$ {estimative.uberComfort}</li>
+            <hr />
+            <li><strong>Uber Black:</strong> R$ {estimative.uberBlack}</li>
           </ul>
         </div>
       )}

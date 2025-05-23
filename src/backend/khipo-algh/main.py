@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from estimative import estimativa
+from fastapi.middleware.cors import CORSMiddleware
+
 
 class AdressRequest(BaseModel):
     origem: str
@@ -12,6 +14,15 @@ class EstimativeResponse(BaseModel):
     uberBlack: str
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # ou substitua por ["http://localhost:3000"] se quiser restringir
+    allow_credentials=True,
+    allow_methods=["*"],  # ou ["POST", "OPTIONS"]
+    allow_headers=["*"],
+)
+
 
 @app.post("/estimative", response_model=EstimativeResponse)
 async def get_estimative(request: AdressRequest):

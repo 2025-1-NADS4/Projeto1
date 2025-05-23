@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-const GOOGLE_API_KEY = 'AIzaSyAdoRf5c3Wj8_SXlQCFXi4wju0xn64fqyQ';
+const GOOGLE_API_KEY = '';
 
 const UberFareEstimator: React.FC = () => {
   const [origin, setOrigin] = useState('');
